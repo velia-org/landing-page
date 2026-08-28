@@ -1,0 +1,3 @@
+"use client";
+import type { Product } from "@/data/products"; import { BagIcon, HeartIcon } from "./Icons"; import { useStore } from "./StoreProvider";
+export function ProductPurchase({product}:{product:Product}){const {wishlist,toggleWishlist,addCart}=useStore();const liked=wishlist.includes(product.slug);return <div className="purchaseActions"><button data-cursor="hover" className="primaryButton wide" onClick={()=>addCart(product.slug)}>Añadir a mi bolsa <BagIcon/></button><button data-cursor="hover" className={`secondaryIcon ${liked?'active':''}`} onClick={()=>toggleWishlist(product.slug)} aria-label="Guardar en favoritos"><HeartIcon/></button></div>}
