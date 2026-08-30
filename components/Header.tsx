@@ -22,7 +22,7 @@ export function Header(){
     <header className={`siteHeader ${onDark?'onDark':''}`}>
       <button data-cursor="hover" className="iconButton mobileOnly" aria-label="Abrir menú" onClick={()=>setOpen(true)}><MenuIcon/></button>
       <nav className="desktopNav" aria-label="Principal">{nav.slice(0,2).map(([h,l])=><Link data-cursor="hover" className="navHairline" key={h} href={h}>{l}</Link>)}</nav>
-      <Link data-cursor="hover" className="logoLink" href="/"><Wordmark/></Link>
+      <Link data-cursor="hover" className="logoLink" href="/"><Wordmark light={onDark}/></Link>
       <nav className="desktopNav right" aria-label="Secundaria">
         <Link data-cursor="hover" className="navHairline" href="/nosotros">Nosotros</Link>
         <button data-cursor="hover" className="iconButton" aria-label={`Favoritos: ${wishlist.length}`}><HeartIcon/><sup>{wishlist.length||''}</sup></button>

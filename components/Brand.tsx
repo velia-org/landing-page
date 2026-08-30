@@ -1,6 +1,25 @@
-export function Wordmark({ light = false }: { light?: boolean }) {
-  return <span className={`wordmark ${light ? "wordmarkLight" : ""}`} aria-label="Velia">VELI<span>A</span></span>;
+export function Wordmark({ light = false, className = "" }: { light?: boolean; className?: string }) {
+  return (
+    <img
+      className={`wordmark brandWordmark ${className}`.trim()}
+      src={light ? "/brand/velia-wordmark-cream.svg" : "/brand/velia-wordmark-burgundy.svg"}
+      alt="VELIA"
+      width={710}
+      height={199.25}
+      draggable={false}
+    />
+  );
 }
-export function Monogram({ className = "" }: { className?: string }) {
-  return <svg className={className} viewBox="0 0 90 90" aria-label="Monograma VA"><path d="M16 20 40 70 61 22" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M39 70 61 20 77 70M49 50h20" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M65 16c4 1 7 4 8 8-4-1-7-4-8-8Z" fill="currentColor"/></svg>;
+
+export function Monogram({ className = "", light = false }: { className?: string; light?: boolean }) {
+  return (
+    <img
+      className={`brandMonogram ${className}`.trim()}
+      src={light ? "/brand/velia-monogram-va-circle-cream.svg" : "/brand/velia-monogram-va-circle-burgundy.svg"}
+      alt="Monograma VA de VELIA"
+      width={220.5}
+      height={230}
+      draggable={false}
+    />
+  );
 }

@@ -22,7 +22,7 @@ export default function Home(){return <>
       <Link data-cursor="hover" className="ghostButton animatedEdge" href="/descubre">Descubre tu joya</Link>
     </div>
   </div>
-  <div className="heroMark"><Monogram/></div>
+  <div className="heroMark"><Monogram light/></div>
   <div className="heroScrollCue" aria-hidden="true"><span>DESCUBRE</span><i/></div>
 </section>
 

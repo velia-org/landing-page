@@ -26,7 +26,7 @@ export function ZodiacOrbit({ compact = false }: { compact?: boolean }) {
           </Link>
         ))}
       </div>
-      <div className="zodiacOrbitCore"><Monogram/><span>VELIA</span></div>
+      <div className="zodiacOrbitCore"><Monogram light/><span>VELIA</span></div>
     </div>
   );
 }

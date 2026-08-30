@@ -11,6 +11,8 @@ export function SmoothScroll() {
       smoothWheel: true,
       wheelMultiplier: 0.9,
       touchMultiplier: 1,
+      infinite: false,
+      overscroll: false,
     });
     let raf = 0;
     const loop = (time: number) => {
